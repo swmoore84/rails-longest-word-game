@@ -1,0 +1,15 @@
+<h1>Result</h1>
+<br>
+
+<% if @in_grid == false || @answer.length.zero? %>
+  Sorry but <%= @answer.upcase %> can't be built out of <%= @grid.join %>
+<% elsif @real_word == false %>
+  Sorry but <%= @answer.upcase %> does not seem to be a valid English word
+<% else %>
+  Congratulations <%= @answer.upcase %> is a valid English word
+<% end %>
+
+<br>
+<br>
+
+<%= link_to "Play again", "/new" %>
